@@ -1,0 +1,21 @@
+html{font-family:"微软雅黑";}
+body{background: #f0f2f5;}
+.s-container{width:750px;margin:0 auto;}
+.member-header{height:80px;
+	background-color: #fff;
+	-webkit-box-shadow: 0 2px 3px rgba(4,0,0,.1);
+	-moz-box-shadow: 0 2px 3px rgba(4,0,0,.1);
+	box-shadow: 0 2px 3px rgba(4,0,0,.1);}
+.header-l{padding: 20px 0;}
+.header-l span{font-size: 18px;color:#333;}
+.header-l .logo{display:inline-block;width:164px;}
+.header-r{padding: 20px 0;}
+.header-r span{font-size: 14px;color:#999;}
+.header-r a.btn{font-size: 16px;color:#333;display:inline-block;background-color: #f2f5f7;padding:0 12px;border:1px solid #ddd;}
+.header-r a{color: #868686;line-height: 32px;padding: 0 10px;font-size: 14px;display:inline-block;line-height: 40px;}
+.member-header span{display: inline-block;line-height: 40px;}
+.s-nav{overflow: hidden;padding: 20px 0;line-height: 40px;}
+.s-nav li{float: left;padding: 0 20px;}
+.s-nav a{font-size: 16px;color:#333;}
+.s-nav .active a{color:#26b14c;}
+

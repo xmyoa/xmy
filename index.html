@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>  <html class="ie6" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if IE 7]>     <html class="ie7" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if IE 8]>     <html class="ie8" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if IE 9]>     <html class="ie9" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-cmn-Hans">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>首页</title>
+		<meta name="Description" content="" />
+		<meta name="Keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/index.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/datetime-picker.css" />
+		<script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+		<script src="assets/js/base.js" type="text/javascript"></script>
+		<script src="assets/js/member.js" type="text/javascript"></script>
+		<script src="assets/js/datetime-picker.js" type="text/javascript"></script>
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body>
+		<header class="header header-fixed-top">
+			<div class="header-wrap">
+				<div class="header-left">
+					<a class="logo fl-l" href=""><img src="assets/img/logo.png"></a>
+					<div class="city-select">
+						<span class="current-city" data-toggleparent="active">全国 <i class="triangle5"></i></span>
+					</div>
+				</div>
+				<div class="header-right">
+					<div class="qr-code-icon fl-l">
+						<span class="tag tag-default">下载APP</span>
+						<i class="header-icon app-icon icon"></i>
+						<div class="icon qr-code-box qr-code-app">
+							<img class="qr-code-box-img" src="assets/img/qr-code.png">
+						</div>
+					</div>
+					<div class="qr-code-icon fl-l">
+						<i class="header-icon weixin-icon icon"></i>
+						<div class="icon qr-code-box qr-code-weixin">
+							<img class="qr-code-box-img" src="assets/img/qr-code.png">
+						</div>
+					</div>
+					<div class="user-link fl-l">
+						<a href="reg.html">免费注册</a>
+						<a href="javascript:;" data-toggleparent="active">登陆</a>	
+		                <div class="login-form member-form pb55">
+		                    <div class="login-tab">
+		                        <a href="javascript:;" class="current fl-l">账户登录</a>
+		                        <b class="h-line fl-l"></b>
+		                        <a href="javascript:;" class="fl-r">手机动态登录</a>
+		                    </div>
+		                    <div class="login-tab-con current">
+		                            <div class="input-group">
+		                                <i class="icons icon-user"></i>
+		                                <input type="text" name="username" id="username" class="i-text" placeholder="请输入手机号">
+		                                <div class="error-tips"></div>
+		                            </div>
+		                            <div class="input-group">
+		                                <i class="icons icon-key"></i>
+		                                <input type="password" name="password" id="password" class="i-text" placeholder="请输入密码">
+		                                <div class="error-tips"></div>
+		                            </div>
+		                    </div>
+		                    <div class="login-tab-con">
+		                            <div class="input-group">
+		                                <i class="icons icon-user"></i>
+		                                <input type="text" name="phonenumber" class="i-text" id="phonenumber" placeholder="请输入手机号码">
+		                                <div class="error-tips"></div>
+		                            </div>
+		                            <div class="input-group">
+		                                <i class="icons icon-key"></i>
+		                                <span class="fl-r"><input type="button" class="vcode-btn btn" value=" 获取动态码"></span>
+		                                <input type="text" name="vcode" id="vcode" class="i-text v-input" placeholder="请输入动态验证码">
+		                                <div class="error-tips"></div>
+		                            </div>
+		                    </div>
+		                    <div class="btn-op al-c pt20"><button type="submit" class="submit_button">登 录</button></div>
+		                	<div class="links-op pt20">
+		                      	<span class="fl-l">还不是会员？</span><a href="reg.html" class="fl-l">立即注册</a>
+		                      	<a href="" class="fl-r">忘记密码？</a>
+		                 	</div>
+		                </div>
+					</div>
+				</div>
+				<nav class="header-nav">
+					<ul class="nav">
+						<li>
+							<a href="" class="active">首页</a>
+						</li>
+						<li>
+							<a href="">今日优惠<span class="tag tag-default round frt">HOT</span></a>
+						</li>
+						<li>
+							<a href="">我要租车</a>
+						</li>
+						<li>
+							<a href="">爱车出租</a>
+						</li>
+						<li>
+							<a href="">云滴巴士</a>
+						</li>
+						<li>
+							<a href="">企业租车</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<div class="main-container">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel" data-width="1920" data-height="652">
+				<div class="carousel-inner">
+					<div class="pic-meadow"></div>
+					<div class="pic-shadow"></div>
+					<div class="pic-cloud cloud-1"></div>
+					<div class="pic-cloud cloud-2"></div>
+					<div class="pic-cloud cloud-3"></div>
+					<div class="pic-cloud cloud-4"></div>
+					<div class="pic-rainbow"></div>
+					<div class="item active">
+						<div class="slide slide-1">
+							<img src="assets/img/car.png" alt="" class="sliderpic" />
+						</div>
+					</div>
+				</div>
+				<div class="search-box">
+					<div class="t-txt">
+						<p>云滴租车平台提供丰富车型、海量车源，任你挑选 </p>
+						<a href="">如何使用云滴租车？</a>
+					</div> 
+					<div class="search-form">
+		                <div class="fl-l input-group">
+		                	<i class="icon icon-date"></i>
+		                	<input type="text" id="in_time_begin" class="i-text radius" placeholder="取车时间">
+		                </div>	
+		                <div class="fl-l input-group">
+		                	<i class="icon icon-date"></i>
+		                	<input type="text" id="in_time_back" class="i-text radius" placeholder="还车时间">
+		                </div>
+		                <div class="fl-l input-group">
+		                	<input type="submit" class="btn radius" value="搜索车辆">
+		                </div>
+					</div>
+					<script type="text/javascript">
+						$('.search-box .input-group .icon-date').click(function(){
+							$(this).next('.i-text').focus();
+						});
+						$("#in_time_begin,#in_time_back").datetimepicker({
+							format: "yyyy-mm-dd",
+							minView : "month",
+							pickDate: true,
+							bootcssVer:3,
+							todayHighlight : true,
+							language : 'zh-CN'
+						})
+						.on('changeDate', function(e){
+							var _yyyy = e.date.getFullYear();
+							var _mm = e.date.getMonth() + 1;
+							var _dd = e.date.getDate();
+							_mm = (_mm < 10 ? '0' : '') + _mm;
+							_dd = (_dd < 10 ? '0' : '') + _dd;
+							var time = [_yyyy, _mm, _dd].join("-");
+     	      				$('.datetimepicker-days').each(function(){
+     	      					$(this).is(':visible') && $(this).find('.dt-input-date').text(time);
+     	      				});
+						});
+					</script>
+				</div>
+			</div>
+			<div class="block-con pt55 container">
+				<div class="b-c-title">
+					<p>云滴租车可提供的服务与优势 </p>
+					<p><small>What abou yundi’s Services and advantages </small></p>
+				</div>
+				<div class="b-c-con pt55 ad-list">
+					<ul>
+						<li>
+							<i class="icon icon-1"></i>
+							<p class="p1">各种长租短租随意支配</p>
+							<p class="p2">时租；半日租，日租，超长租，时间弹性大，可选择时间各类繁多，还车租车只需要提前2小时预约即可，操作方便，还车简单。</p>
+						</li>
+						<li>
+							<i class="icon icon-2"></i>
+							<p class="p1">手机；电脑各种移动设备均可操作</p>
+							<p class="p2">可通过官方网址登陆进行租选车辆，如果出行在外，只需在应用市场，对应使用苹果或安卓手机下载《云滴租车》即可使用。首页均有下载二维码快捷入口。没有流量怎么办，手机端登陆wap也是不错的选择。</p>
+						</li>
+						<li>
+							<i class="icon icon-3"></i>
+							<p class="p1">这也许可以成为你的职业</p>
+							<p class="p2">平台多样化，除了租车服务以外，有闲置车辆或空档时间也可出租您的爱车，为您增加一份额外收益。也可以选择加入我们的云滴司机，一系列培训及资格验证后，可选择自带车辆加入，或个人加入，也许你就是下一个合作伙伴。</p>
+						</li>
+						<li>
+							<i class="icon icon-4"></i>
+							<p class="p1">云滴租车的优势在哪里</p>
+							<p class="p2">作为当地的交通平台，拥有绝大部分车辆资源，车型种类繁多，从民用到商用及大型用车均有配套车辆可选。理赔方便：1.提供不计免赔服务    2.百万保险，险种丰富   3. 7*24小时道路救援服务</p>
+						</li>
+						<li>
+							<i class="icon icon-5"></i>
+							<p class="p1">可选择配驾服务</p>
+							<p class="p2">自由行；深度游，害怕过度劳累？人生路不熟悉？不用担心，云滴设有租车可连带司机服务，再也不会错过最美的风景，最地道的小吃，本地司机带你游遍全城，绝对的定制线路，全程没有购物点。</p>
+						</li>
+						<li>
+							<i class="icon icon-6"></i>
+							<p class="p1">价格惊喜与优惠</p>
+							<p class="p2">拥有大量当地租赁公司提供在闲置车辆及民用车辆，给以建议价格，由车主自由定价，价格透明，竞争强烈，同款车型有多个选择，对应上传真实拍手拍照，按价格排序各各种筛选方式，一定可以找到性价比最高的车辆。</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block-con object-block">
+				<img src="assets/img/picture.jpg" alt="" class="imgl-object fl-l" />
+				<div class="container">
+					<div class="object-desc">
+						<p class="p1">云滴租车是谁？<b>About Us</b></p>
+						<p class="p2">
+							云滴租车是一个基于互联网技术的便捷的汽车租赁共享租车服务平台，为乐于共享爱车的车主提供通过出租爱车带来可观收益的私家车出租、汽车出租服务，让爱车的闲置时间变成丰厚的现金。同时，PP租车为有租车需求的用户提供便捷、低价、便宜的就近个人租车、租车自驾、短期长期日租车、婚庆租车、结婚租车、旅游租车、商务租车、长途租车等租车服务。2012年5月，PP租车公司于（www.icarsclub.com）新加坡开始筹备运营。2013年8月，具有浓厚中国大陆背景的PP租车公司团队带着一腔热情在中国大陆成功推行PP汽车租赁平台，正式完成在亚洲金融中心新加坡和中国首都的布局。
+	PP租车为社会创造价值，让人们出行更便利， 让汽车的使用率变得更好，为保护环境而出一份力。PP租车团队正在不懈努力，期待以更快的速度将P2P租车服务尽快推广到全中国以及亚洲的其他地区，以期为广大用户创造更大价值，并产生良好的社会效应。 PP租车秉承着“人人信赖的汽车共享在线平台”的企业愿望，追崇“用户为至高导向”的价值观，依托人们对飞速发展的城市交通的需求，积极拓展互联网技术创新，致力于为用户提供“安全、便捷、可靠”的汽车租赁在线共享服务。
+						</p>
+						<a href="" class="btn radius mt20">了解更多…</a>
+					</div>
+				</div>
+			</div>
+			<div class="block-con pt20 pb25 hotlist-block">
+				<div class="b-c-con hotcartlist">
+					<ul>
+						<li>
+							<a href=""><img src="assets/img/car/img-1.jpg" alt="" /></a>
+							<p class="p1">沃尔沃XC60<span>￥500日均</span></p>
+							<p class="p2"><span>3年车龄</span><span>2万公里</span><span>自动档</span></p>
+						</li>
+						<li>
+							<a href=""><img src="assets/img/car/img-2.jpg" alt="" /></a>
+							<p class="p1">丰田凯美瑞 <span>￥400日均</span></p>
+							<p class="p2"><span>3年车龄</span><span>2万公里</span><span>自动档</span></p>
+						</li>
+					</ul>
+					<ul>
+						<li>							
+							<div class="b-c-title pt80 pb55">
+								<p> 云滴租车精选  </p>
+								<p><small class="c_75888d">About Translation  About Translation</small></p>
+							</div>
+							<a href=""><img src="assets/img/car/img-3.jpg" alt="" /></a>
+							<p class="p1">福特翼搏<span>￥250日均</span></p>
+							<p class="p2"><span>3年车龄</span><span>2万公里</span><span>自动档</span></p>
+							<div class="label-con">
+								<span class="label">今日特惠</span>
+							</div>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<a href=""><img src="assets/img/car/img-4.jpg" alt="" /></a>
+							<p class="p1">雪佛兰爱唯欧<span>￥680日均</span></p>
+							<p class="p2"><span>3年车龄</span><span>2万公里</span><span>自动档</span></p>
+						</li>
+						<li>
+							<a href=""><img src="assets/img/car/img-5.jpg" alt="" /></a>
+							<p class="p1">大众途观 <span>￥320日均</span></p>
+							<p class="p2"><span>3年车龄</span><span>2万公里</span><span>自动档</span></p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block-con pt55 pb80 lesson-block">				
+				<div class="b-c-title pt80 pb55">
+					<p>使用教程   </p>
+					<p><small class="c_75888d">About Translation</small></p>
+				</div>				
+				<div class="b-c-con container">
+					<div class="lesson-item">
+						<div class="radius">
+							<div class="lesson-tit">寻找心仪车辆</div>
+							<div class="lesson-icon"><i class="icon-11"></i></div>
+							<ul>
+								<li>利用PP租车APP及网站，  </li>
+								<li>发现心仪车辆，多维度选项，</li>
+								<li>通过距离、价格、品牌巧妙寻找车辆</li>
+							</ul>
+							<div class="al-c pb25 pt10"><span class="label">步骤1</span></div>
+						</div>		
+					</div>		
+					<div class="lesson-item active">
+						<div class="radius">
+							<div class="lesson-tit">预定并支付押金</div>
+							<div class="lesson-icon"><i class="icon-12"></i></div>
+							<ul>
+								<li>对选定车辆下单，  </li>
+								<li>车主接受后，</li>
+								<li>线上支付对应的押金及保险相关费用</li>
+							</ul>
+							<div class="al-c pb25 pt10"><span class="label">步骤2</span></div>
+						</div>					
+					</div>					
+					<div class="lesson-item">
+						<div class="radius">
+							<div class="lesson-tit">畅享驾驶乐趣</div>
+							<div class="lesson-icon"><i class="icon-13"></i></div>
+							<ul> 
+								<li>获知汽车的准确地点，  </li>
+								<li>到达位置，</li>
+								<li>交车使用</li>
+							</ul>
+							<div class="al-c pb25 pt10"><span class="label">步骤3</span></div>
+						</div>								
+					</div>								
+				</div>
+			</div>
+			<div class="block-con pt55 pb55 faq-block">				
+				<div class="b-c-title pt80 pb55">
+					<div class="b-c-inline">						
+						<span class="title-label">FAQ</span>
+						<span>租车常见问题     </span>
+						<span><small>About Translation  About Translation</small></span>
+					</div>
+				</div>				
+				<div class="b-c-con container faq-list">
+					<ul>
+						<li>
+							<div class="faq-item">
+								<img src="assets/img/avatar.png" class="avatar" />
+								<p class="p1 pt20"><a href="">平台介绍</a></p>
+								<p class="p2 pt10">关于云滴租车平台相关问题</p>
+							</div>
+						</li>
+						<li>
+							<div class="faq-item">
+								<img src="assets/img/avatar.png" class="avatar" />
+								<p class="p1 pt20"><a href="">车主帮助</a></p>
+								<p class="p2 pt10">安全保障、出租流程等问题</p>
+							</div>
+						</li>
+						<li>
+							<div class="faq-item">
+								<img src="assets/img/avatar.png" class="avatar" />
+								<p class="p1 pt20"><a href="">租客帮助</a></p>
+								<p class="p2 pt10">租车流程、支付问题</p>
+							</div>
+						</li>
+						<li>
+							<div class="faq-item">
+								<img src="assets/img/avatar.png" class="avatar" />
+								<p class="p1 pt20"><a href="">会员服务</a></p>
+								<p class="p2 pt10">代金卷兑换、优惠相关等问题</p>
+							</div>
+						</li>
+						<li>
+							<div class="faq-item">
+								<img src="assets/img/avatar.png" class="avatar" />
+								<p class="p1 pt20"><a href="">联系我们</a></p>
+								<p class="p2 pt10">客服、微信、邮箱等不同管道</p>
+							</div>
+						</li>
+						<li>
+							<div class="faq-item">
+								<img src="assets/img/avatar.png" class="avatar" />
+								<p class="p1 pt20"><a href="">更多问题</a></p>
+								<p class="p2 pt10">实际使用中可能遇到的一些情况</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="block-con">
+				<a href=""> <img src="assets/img/picture-2.jpg" alt="" class="full-object" /> </a>
+			</div>
+			<div class="block-con app-block al-c">			
+				<div class="b-c-title pt80 pb55">
+					<p>手机下单更便捷     </p>
+					<p><small class="c_75888d">About Translation  About Translation</small></p>
+				</div>				
+				<a href=""> <img src="assets/img/picture-3.jpg" alt="" class="img-object" /> </a>
+			</div>
+			<div class="block-con joinus-block">			
+				
+			</div>
+		</div>
+		<footer class="footer pt80">
+			<div class="container">
+				<div class="footer-top">
+					<dl>
+						<dt>关于云滴</dt>
+						<dd>
+							<p> 2012年5月，云滴出行于(www.icarsclub.com)新加坡开始筹备运营。2013年8月，具有浓厚中国大陆背景的云滴出行团队带着一腔热情在中国大陆成功推行云滴出行平台，正式完成在亚洲金融中心新加坡和中国首都的布局。</p>
+							<p>在新加坡国立研究基金的大力支持下，作为亚洲领先的P2P在线租车平台，云滴出行受到《海峡时报》、《联合早报》和新传媒等各大主流媒体的争相报道，从诞生之日起，云滴出行就犹如一颗璀璨的明珠备受公众注目。云滴出行为社会创造价值，让人们出行更便利，让汽车使用率变得更好、为保护环境而出一份力。云滴出行团队正在不懈努力，期待以更快的速度将P2P租车服务尽快推广到全中国以及亚洲的其他地区，以期为广大用户创造更大价值，并产生良好的社会效应。</p>
+							<p>云滴出行秉承着“人人信赖的汽车共享在线平台”的企业愿景，追崇“用户为至高导向”的价值观，依托人们对飞速发展的城市交通的需求，积极拓展互联网技术创新，致力于为用户提供“安全、便捷、可靠”的汽车在线共享服务。</p>
+						</dd>
+						<dd>
+							<div class="phonenum mt25"><i class="icon"></i> 客服电话+987 9978 888 </div>
+						</dd>
+					</dl>
+					<dl class="coop-friends">
+						<dt>合作伙伴</dt>
+						<dd>
+							<a href="" class="fl-l">  
+								<img src="assets/img/coop-icon.png" alt="" />
+							</a>
+							<a href="" class="fl-r">  
+								<img src="assets/img/coop-icon.png" alt="" />
+							</a>
+							<a href="" class="fl-l">  
+								<img src="assets/img/coop-icon.png" alt="" />
+							</a>
+							<a href="" class="fl-r">  
+								<img src="assets/img/coop-icon.png" alt="" />
+							</a>
+						</dd>
+					</dl>
+				</div>
+				<div class="copyright mt25 pb10">
+					All contents © copyright 2016 Business Theme. All rights reserved Designed by : CM
+				</div>
+			</div>
+		</footer>
+		<div class="chat-online">
+			<button class="btn radius"><span class="chat"><i class="icon"></i>咨询在线客服</span></button>
+		</div>
+	</body>
+</html>

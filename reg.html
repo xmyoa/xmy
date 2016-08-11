@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>  <html class="ie6" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if IE 7]>     <html class="ie7" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if IE 8]>     <html class="ie8" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if IE 9]>     <html class="ie9" lang="zh-cmn-Hans"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="zh-cmn-Hans">
+	<!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+		<meta name="renderer" content="webkit">
+		<title>会员注册</title>
+		<meta name="Description" content="" />
+		<meta name="Keywords" content="" />
+		<link rel="stylesheet" type="text/css" href="assets/css/common.css" />
+		<link rel="stylesheet" type="text/css" href="assets/css/member.css" />
+		<script src="assets/js/jquery-1.9.0.min.js" type="text/javascript"></script>
+		<!--[if lte IE 8]>
+		<script src="assets/js/html5.js"></script>
+	    <![endif]-->
+	</head>
+
+	<body>
+		<header class="member-header">
+			<div class="s-container">
+				<div class="header-l fl-l">
+					<a class="logo fl-l" href=""><img src="assets/img/s-logo.png"></a>
+					<b class="h-line fl-l"></b>
+					<span>注册账号</span>
+				</div>
+				<div class="header-r fl-r">
+					<a href="" class="btn fl-r ml10">登录</a>
+					<span class="fl-r">我已有注册，现在就去</span>
+				</div>
+			</div>
+		</header>
+		<div class="s-container">		
+          	<div class="reg-form member-form">                	
+                <div class="head-tit">注册云滴账号</div>
+                <div class="reg-con pt55 pb55">
+                            <div class="input-group">
+                                <label for="">手机号</label>
+                                <input type="text" name="phonenumber" id="phonenumber" class="i-text" placeholder="输入您的手机号">
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="input-group">
+                                <label for="">动态码</label>
+                                <span class="fl-r"><input type="button" class="vcode-btn btn" value=" 获取动态码"></span>
+                                <input type="text" name="vcode" id="vcode" class="i-text v-input" placeholder="输入手机动态码">
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="input-group">
+                                <label for="">密码</label>
+                                <input type="password" name="password" id="password" class="i-text" placeholder="密码请设置6-12位数字、字母、符号或组合" onchange="checkPasswords()">
+                                <div class="error-tips"></div>
+                            </div>
+                            <div class="input-group">
+                                <label for="">邀请码</label>
+                                <input type="password" name="joincode" id="joincode" class="i-text" placeholder="如有邀请码，请填写邀请码（选填）">
+                                
+                            </div>
+                    <div class="assignment">点击注册表示您已阅读并同意<a href="">《云滴租车用户协议》</a></div>
+                    <div class="btn-op pt55"><button type="submit" class="submit_button" onClick="submit();">注 册</button></div>
+                </div>
+         	</div>
+		</div>
+		<script type="text/javascript">
+
+        var _phonenumber = $("#phonenumber");
+        var _vcode = $("#vcode");
+        var _password = $("#password");
+        var _passwordagain = $("#passwordagain");
+
+        $('.member-form .input-group input').keyup(function(){
+            $(this).siblings(".error-tips").html('').hide();
+        });
+
+        function submit() {
+            if(_phonenumber.val()==""){ 
+                _phonenumber.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>手机号码不能为空！</span>').show();
+                _phonenumber.focus(); 
+                return false; 
+            }
+            if (!_phonenumber.val().match(/^(1(([35][0-9])|(47)|[8][01236789]))\d{8}$/)) {
+                _phonenumber.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>手机号码格式不正确！</span>').show();
+                _phonenumber.focus(); 
+                return false; 
+            } 
+            else _phonenumber.siblings(".error-tips").html('').hide();
+
+            if(_vcode.val()==""){ 
+                _vcode.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>验证码不能为空！</span>').show();
+                _phonenumber.siblings(".error-tips").html('<span class="onSuccess"><i class="icons"></i></span>').show();
+                _vcode.focus(); 
+                return false; 
+            }
+            else if (!_vcode.val().match(/^.{6}$/)) {
+                _vcode.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>验证码长度不正确！</span>').show();
+                _phonenumber.siblings(".error-tips").html('<span class="onSuccess"><i class="icons"></i></span>').show();
+                _vcode.focus(); 
+                return false; 
+            } 
+            else _vcode.siblings(".error-tips").html('').hide();
+
+            if(_password.val()==""){ 
+                _password.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>密码不能为空！</span>').show();
+                _passwordagain.siblings(".error-tips").html('').hide();
+                _password.focus(); 
+                return false; 
+            }
+            else if (!_password.val().match(/^[\w]{6,12}$/)) {
+                _password.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>密码长度不正确！</span>').show();
+                _passwordagain.siblings(".error-tips").html('').hide();
+                _password.focus(); 
+                return false; 
+            };
+            checkPasswords();
+        }
+        function checkPasswords() {
+            if (_password.val() != _passwordagain.val())  _passwordagain.siblings(".error-tips").html('<span class="onError">两次输入的密码不匹配</span>').show();
+            else  _passwordagain.siblings(".error-tips").html('').hide();
+        } 
+        $('.member-form .vcode-btn').click(function(){        	
+            if(_phonenumber.val()!=="" && _phonenumber.val().match(/^(1(([35][0-9])|(47)|[8][01236789]))\d{8}$/)){             	
+	        	$(this).val(' 58秒后重新获取动态码').addClass('loading');
+	        	_vcode.siblings(".error-tips").html('<span class="c_999">短信动态码已发送,<br> 请您在30分钟内填写</span>').show();
+	        	_phonenumber.siblings(".error-tips").html('<span class="onSuccess"><i class="icons"></i></span>').show();
+            }
+            else{
+            	_phonenumber.siblings(".error-tips").html('<span class="onError"><i class="icons"></i>请输入手机号码！</span>').show();
+            }
+        });
+    </script>
+	</body>
+
+</html>
